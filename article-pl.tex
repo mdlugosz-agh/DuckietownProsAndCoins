@@ -1,0 +1,70 @@
+% !TEX encoding = UTF-8 Unicode
+
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a proceedings volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass{svproc}
+%
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+% to typeset URLs, URIs, and DOIs
+\usepackage{url}
+\def\UrlFont{\rmfamily}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[textsize=scriptsize]{todonotes}
+\usepackage{gensymb}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\begin{document}
+\mainmatter              % start of a contribution
+%
+\title{Duckietown pros and coins}
+%
+\titlerunning{Koncepcja systemu sterowania autonomicznego pojazdu elektrycznego A-EVE}  % abbreviated title (for running head)
+%                                     also used for the TOC unless
+%                                     \toctitle is used
+%
+\author{Marek Długosz}
+%
+\authorrunning{Marek Długosz} % abbreviated author list (for running head)
+%
+%%%% list of authors for the TOC (use if author list has to be modified)
+\tocauthor{Marek Długosz}
+%
+\institute{AGH University of Science and Technology, \\ Al Mickiewicza 30, 30-059 Kraków, Poland,\\
+\email{mdlugosz@agh.edu.pl}}
+
+\maketitle              % typeset the title of the contribution
+
+\begin{abstract}
+W artykule opisano koncepcję układu sterowania prototypowego autonomicznego pojazdu elektrycznego EVE. Opracowany projekt układu sterowania autonomicznego pojazdu składa się z kilku podsystemów których poprawne działanie, właściwa wymiana danych oraz odpowiednio dobrane i skonfigurowane algorytmy sterowania niskiego i wysokiego poziomu umożliwiają realizację w zadania jazdy autonomicznej. W artykule omówiono/opisano poszczególne podsystemy układu sterowania takie jak: system pomiarowy, system sterowania niskopoziomowego i wysokopoziomowego, algorytmy sterowania, system prezentacji danych a tak że system bezpieczeństwa który gwarantuje bezpieczne użytkowanie autonomicznego pojazdu EVE.
+% We would like to encourage you to list your keywords within
+% the abstract section using the \keywords{...} command.
+\keywords{autonomous, autonomous vehicle, electrical vehicle, control system}
+\end{abstract}
+%
+\section{Introduction}
+Lorem ipsum
+
+%
+\textcolor{red}{
+Ipsum lorem}
+
+\section{Conclusion}
+Lorem
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
