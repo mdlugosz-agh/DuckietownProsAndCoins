@@ -15,7 +15,17 @@
 %
 
 % to typeset URLs, URIs, and DOIs
-\usepackage{url}
+% https://www.overleaf.com/learn/latex/Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
 \def\UrlFont{\rmfamily}
 
 \usepackage[T1]{fontenc}
@@ -48,14 +58,46 @@
 \maketitle              % typeset the title of the contribution
 
 \begin{abstract}
-W artykule opisano koncepcję układu sterowania prototypowego autonomicznego pojazdu elektrycznego EVE. Opracowany projekt układu sterowania autonomicznego pojazdu składa się z kilku podsystemów których poprawne działanie, właściwa wymiana danych oraz odpowiednio dobrane i skonfigurowane algorytmy sterowania niskiego i wysokiego poziomu umożliwiają realizację w zadania jazdy autonomicznej. W artykule omówiono/opisano poszczególne podsystemy układu sterowania takie jak: system pomiarowy, system sterowania niskopoziomowego i wysokopoziomowego, algorytmy sterowania, system prezentacji danych a tak że system bezpieczeństwa który gwarantuje bezpieczne użytkowanie autonomicznego pojazdu EVE.
+Artykuł ten powstał na bazie ponad rocznego używania zestawu Duckietown. Wszystkie elementy projekty (roboty, plansze, infrastruktura drogowa) została zakupiona z sklepu firmowego Duckietown.
+W artykule opisana dostrzeżone wady projektu oraz możliwości ich naprawienia.
+Finalnie należy stwierdzić, że po zastosowaniu opisanych ulepszeń, projekt Duckietown stanowi wartościową pomoc dydaktyczną przeznaczoną do szkolenia uczniów, studentów z zakresu robotów.
 % We would like to encourage you to list your keywords within
 % the abstract section using the \keywords{...} command.
 \keywords{autonomous, autonomous vehicle, electrical vehicle, control system}
 \end{abstract}
 %
 \section{Introduction}
-Lorem ipsum
+Historia projektu Duckietown. Opis zawodów MOOC.
+Alternatywne projekty np. F1/10.
+
+\section{Hardware}
+\subsection{Nadwozie}
+\begin{itemize}
+\item wyłamujące się elementy obudowy
+\item plastikowe śróbki
+\item rozchodzące się koła na zewnątrz -- zastosowanie dodatkowych poprzeczek uszytwniających
+\item plansza, nierówne wymiary odklejające się znaki
+\item elementy infrastruktury z drewna - słaba jakoś połączeń
+\item silniki, wymiana na silnik SKU 
+\end{itemize}
+
+\subsection{Silniki}
+Silnik z przekładnią 120:1, 160 obr/min, moment obrotowy 0,8 kg*cm (0,07 Nm). Urządzenia posiada enkoder kwadraturowy o rozdzielczości 8 impulsów na obrót (po przełożeniu 960 impulsów na obrót).
+
+\href{https://botland.com.pl/silniki-dc-z-przekladnia-i-enkoderami/6287-silnik-z-przekladnia-sj01-120-1-6v-160rpm-enkoder-5904422306793.html}{Botland}, \href{https://www.dfrobot.com/product-1457.html}{DFRobot}
+
+\subsection{Koła}
+Koła mają tą wadę, że po pewnym czasie mogą odpaść od wału silnika. Brak jakiejkolwiek możliwości mechanicznego zabezpieczenia przed taką sytuacją. Problem można rozwiązać przy zastosowaniu silników SJ01 na dwa sposoby
+\paragraph{Rozwiązanie 1}
+Zakup innych typów kół np. \href{https://www.dfrobot.com/product-652.html}{SKU:FIT0199-B} (wymagany dodatkowo  adaptera który nie jest już produkowany \href{https://www.dfrobot.com/product-645.html}{SKU:FIT0198}) lub \href{https://www.dfrobot.com/product-1535.html}{SKU:FIT0500} (większa średnica kół). Można również zakupić koła z firmy Botland \href{https://botland.com.pl/kola-z-oponami/12463-kolo-65x15-mm-biale-5903351248143.html}{DNG-12463}, \href{https://botland.com.pl/kola-z-oponami/13946-kolo-z-opona-65x13mm-biale-5903351248174.html}{DNG-13946}.
+
+\paragraph{Rozwiązanie 2}
+Wywiercenie otworów w standardowych kołach (SKU:FIT0003) i przykręcenie ich śruba do wału silnika
+
+\section{Software}
+\begin{itemize}
+	\item nieaktualna dokumentacja z błędami
+\end{itemize}
 
 %
 \textcolor{red}{
