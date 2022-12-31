@@ -33,6 +33,9 @@
 \usepackage[textsize=scriptsize]{todonotes}
 \usepackage{gensymb}
 
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+
 \renewcommand{\labelenumii}{\theenumii}
 \renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
 
@@ -61,6 +64,11 @@
 Artykuł ten powstał na bazie ponad rocznego używania zestawu Duckietown. Wszystkie elementy projekty (roboty, plansze, infrastruktura drogowa) została zakupiona z sklepu firmowego Duckietown.
 W artykule opisana dostrzeżone wady projektu oraz możliwości ich naprawienia.
 Finalnie należy stwierdzić, że po zastosowaniu opisanych ulepszeń, projekt Duckietown stanowi wartościową pomoc dydaktyczną przeznaczoną do szkolenia uczniów, studentów z zakresu robotów.
+Lorem Ipsum.
+\begin{itemize}
+    \item punkt I
+    \item punkt II
+\end{itemize}
 % We would like to encourage you to list your keywords within
 % the abstract section using the \keywords{...} command.
 \keywords{autonomous, autonomous vehicle, electrical vehicle, control system}
@@ -80,6 +88,12 @@ Alternatywne projekty np. F1/10.
 \item elementy infrastruktury z drewna - słaba jakoś połączeń
 \item silniki, wymiana na silnik SKU 
 \end{itemize}
+
+Kolejnym problemem związanym z nadwoziem, jest brak odpowiedniej szczytwoności poprzecznej (wzdłu osi Y) co skutkuje tym, 
+że koła napędowe ulegają odkształceniu na zewnątrz co powoduje niestabilność w trakcie jazdy robota.
+Jakiekolwiek zakłócenie powoduje, że robot gwałtownie skręca.
+
+\includegraphics[width=\columnwidth]{PXL_20221207_092836283.jpg}
 
 \subsection{Silniki}
 Silnik z przekładnią 120:1, 160 obr/min, moment obrotowy 0,8 kg*cm (0,07 Nm). Urządzenia posiada enkoder kwadraturowy o rozdzielczości 8 impulsów na obrót (po przełożeniu 960 impulsów na obrót).
