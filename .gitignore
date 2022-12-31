@@ -3,3 +3,5 @@ article-pl.synctex.gz
 *.aux
 article-pl.out
 article-pl.pdf
+article-pl.fls
+article-pl.fdb_latexmk
